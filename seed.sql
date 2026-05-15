@@ -1,6 +1,4 @@
--- ============================================================
 --  SEED DATA  —  run this file after schema.sql
--- ============================================================
 
 INSERT INTO instructors (first_name, last_name, email, department) VALUES
 ('Alice',   'Martin',  'a.martin@uni.edu',  'Computer Science'),
