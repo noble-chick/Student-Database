@@ -1,10 +1,6 @@
--- ============================================================
 --  QUERIES  —  run schema.sql and seed.sql first
--- ============================================================
 
-
--- ── JOINS ────────────────────────────────────────────────────
-
+-- JOINS
 -- Full transcript: student + course + grade + instructor
 SELECT
     s.first_name || ' ' || s.last_name   AS student,
@@ -20,8 +16,7 @@ JOIN instructors i ON i.instructor_id = c.instructor_id
 ORDER BY student, c.course_code;
 
 
--- ── FILTERING ────────────────────────────────────────────────
-
+-- FILTERING 
 -- Students who scored below 70 (at risk)
 SELECT
     s.first_name || ' ' || s.last_name AS student,
@@ -41,8 +36,7 @@ WHERE instructor_id = (
 );
 
 
--- ── GROUPING & AGGREGATION ───────────────────────────────────
-
+-- GROUPING & AGGREGATION 
 -- Average grade per student
 SELECT
     s.first_name || ' ' || s.last_name  AS student,
@@ -80,8 +74,7 @@ WHERE g.grade = (
 ORDER BY c.title;
 
 
--- ── VIEWS ────────────────────────────────────────────────────
-
+--VIEWS
 CREATE VIEW v_student_summary AS
 SELECT
     s.student_id,
