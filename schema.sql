@@ -1,6 +1,4 @@
--- ============================================================
 --  SCHEMA  —  run this file first
--- ============================================================
 
 CREATE TABLE instructors (
     instructor_id   SERIAL          PRIMARY KEY,
